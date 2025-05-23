@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 #launch a browser and create a new page
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False,slow_mo=1000)  #or p.firefox.launch()  or p.webkit.launch()
+    browser = p.chromium.launch()  #or p.firefox.launch()  or p.webkit.launch()
     page = browser.new_page()
     
     page.goto("https://demoselsite.azurewebsites.net/webform5.aspx")
